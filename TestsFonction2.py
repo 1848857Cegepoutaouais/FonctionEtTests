@@ -19,5 +19,16 @@ def choix_couleur_1_valide()
     assert not result
 
 def montant_lego_choisi_invalide()
-
+    # Arrange
+    montant_lego_choisi = dfghsfg
+    # Act
+    result = montant_lego_choisi_invalide(montant_lego_choisi)
+    # Assert
+    assert not result
 def montant_lego_choisi_valide()
+    # Arrange
+    montant_lego_choisi = 5
+    # Act
+    result = montant_lego_choisi_valide(montant_lego_choisi)
+    # Assert
+    assert not result
