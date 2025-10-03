@@ -1,13 +1,16 @@
 import pytest
-import Fonction3Test as fonctions_a_tester
+import fctListes as moyenne
 
-def test_division_entiere_1():
+@pytest.mark.parametrize("j1, j2, resultat_attendu", [
+    ("roche", "ciseau", "joueur 1 gagne avec roche."),
+    ("roche", "papier", "joueur 2 gagne avec papier."),
+    ("Roche", "Papier", "joueur 2 gagne avec Papier.")
+])
+def test_moyenne(moyenne_rouge, moyenne_vert, moyenne_bleu):
     # Arrange
-    n = 6
-    m = 2
     resultat_attendu = 3
     # Act
-    resultat_division = fonctions_a_tester.division_entiere_1(n, m)
+    resultat_division = moyenne(moyenne_rouge, moyenne_vert, moyenne_bleu)
 
     # Assert
     assert resultat_division == resultat_attendu
